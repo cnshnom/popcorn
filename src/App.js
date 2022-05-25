@@ -5,7 +5,7 @@ import SearchIcon from "./search.svg";
 import Popcorn from "./popcorn.svg"
 import "./App.css";
 
-const API_URL = "http://www.omdbapi.com?apikey=bba09740";
+const API_URL = "https://www.omdbapi.com?apikey=bba09740";
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
