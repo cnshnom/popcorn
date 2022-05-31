@@ -13,6 +13,7 @@
 }
 
 body {
+
   font-family: var(--font-roboto);
   background-image: linear-gradient(to left, #f9ec67, #ffc863, #ffa37b, #ff87a0, #ff7cc6, #de8de6, #b39dfa, #83abff, #53bfff, #23d0ff, #2bdef5, #5be9e3);
   background-repeat: no-repeat;
@@ -41,17 +42,32 @@ body {
 }
 
 h1 {
-  margin: 1em;
-  font-size: 3rem;
-  letter-spacing: 0.9px;
-  background:
-    rgba(249, 211, 180, 1);
+
+ 
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: fit-content;
-}
 
+  margin:0;
+    padding-bottom: 6rem;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+    font-family: 'Teko', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    animation: glow 2s ease-in-out infinite alternate;
+    text-align: center;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px rgba(249, 211, 180, 1);
+  }
+  to {
+    text-shadow: 0 0 30px rgb(252, 219, 191, 1), 0 0 10px rgb(252, 232, 215,1);
+  }
+}
 .search {
   width: 71%;
   margin: 4rem 0 2rem;
@@ -103,11 +119,8 @@ h1 {
 
 .empty {
   width: 100%;
-  margin-top: 1rem;
+  padding-top: 2px;
 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   
 }
 
@@ -115,7 +128,7 @@ h1 {
   font-size: 2rem;
   color: white;
   font-family: var(--font-raleway);
-  text-align: center;
+ 
 }
 
 .container {
@@ -124,7 +137,7 @@ h1 {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 
@@ -243,5 +256,39 @@ h1 {
   .movie {
     width: "100%";
     margin: 1rem;
+  }
+}
+
+
+/*typing effect*/
+.wrapper {
+  height: 20vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.ohoh {
+  width: 20ch;
+  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }

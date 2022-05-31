@@ -21,10 +21,16 @@ const App = () => {
 
     setMovies(data.Search);
   };
+  const handleKeypress = e => {      //it triggers by pressing the enter key    
+    if (e.keyCode === 13) {      
+      searchMovies(searchTerm);
+     } 
+     };
 
   return (
     <div className="app">
-      <h1>Popcorn</h1>
+        <div className="wrapper"><h1 class="pop">Popcorn</h1></div>
+      
       <div  >
         <img
           src={Popcorn}
@@ -38,6 +44,7 @@ const App = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="What do you want to watch?"
+          onKeyPress={handleKeypress}
         />
         <img
           src={SearchIcon}
@@ -54,8 +61,8 @@ const App = () => {
         </div>
       ) : (
         <div className="empty">
+          <div class="wrapper"><h2 class="ohoh" >Oh oh! No movies found...</h2></div>
           
-          <h2 >Oh oh!<br/> <br/> <br/> No movies found</h2>
           <div className="emptyblock"></div>
         </div>
       )}
