@@ -29,8 +29,9 @@ const App = () => {
 
   return (
     <div className="app">
+    
         <div className="wrapper"><h1 class="pop">Popcorn</h1></div>
-      
+        
       <div  >
         <img
           src={Popcorn}
@@ -52,7 +53,7 @@ const App = () => {
           onClick={() => searchMovies(searchTerm)}
         />
       </div>
-
+     
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
