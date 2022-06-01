@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import MovieCard from "./MovieCard";
 import SearchIcon from "./search.svg";
-import Popcorn from "./popcorn.svg"
+//import Popcorn from "./popcorn.svg"
 import "./App.css";
+import "./recommend.css";
 
 const API_URL = "https://www.omdbapi.com?apikey=bba09740";
 
@@ -30,16 +31,20 @@ const App = () => {
   return (
     <div className="app">
     
-        <div className="wrapper"><h1 class="pop">Popcorn</h1></div>
-        
-      <div  >
-        <img
-          src={Popcorn}
-          className="popcorn" 
-          alt="popcorn"
-        />
-        </div>
+        <div className="wrapper"><h1 >Popcorn</h1>  
       
+
+         </div>
+        
+     
+
+    <div className="recommend">
+    <button class="btn third">What's new?</button>
+      </div>
+      
+     
+     
+
       <div className="search">
         <input
           value={searchTerm}
@@ -53,6 +58,8 @@ const App = () => {
           onClick={() => searchMovies(searchTerm)}
         />
       </div>
+
+      
      
       {movies?.length > 0 ? (
         <div className="container">
@@ -62,7 +69,7 @@ const App = () => {
         </div>
       ) : (
         <div className="empty">
-          <div class="wrapper"><p class="ohoh" >Oh oh! No movies found...</p></div>
+          <div className="wrapper"><p class="ohoh" >Oh oh! No movies found...</p></div>
           
           <div className="emptyblock"></div>
         </div>

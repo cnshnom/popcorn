@@ -22,9 +22,15 @@ body {
  
 }
 .popcorn {
-  height:100px;
-  width: 100px;
+  height:50px;
+  width: 500px;
+  display: block;
+ 
+  float: left;
 }
+
+
+
 
 .emptyblock{
 
@@ -68,14 +74,15 @@ h1 {
     text-shadow: 0 0 30px rgb(253, 203, 158), 0 0 10px rgb(252, 207, 168);
   }
 }
+
 .search {
-  width: 71%;
+  width: 50%;
   margin: 4rem 0 2rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   padding: 1.5rem 1.75rem;
   border-radius: 3rem;
   background: #ebf0f6;
@@ -292,3 +299,7 @@ h1 {
     border-color: transparent;
   }
 }
+
+/*recommend*/
+
+
